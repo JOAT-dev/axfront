@@ -30,7 +30,7 @@ const Login = () => {
   };
 
   const handleLogin = () => {
-    fetch("http://localhost:5000/auth/signin", {
+    fetch("https://glamorous-calf-jumper.cyclic.app/auth/signin", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({

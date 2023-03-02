@@ -37,7 +37,7 @@ const Signup = () => {
       username: username,
       password: password,
     };
-    fetch("http://localhost:5000/auth/signup", {
+    fetch("https://glamorous-calf-jumper.cyclic.app/auth/signup", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({

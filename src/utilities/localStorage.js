@@ -29,7 +29,7 @@ export const setIndex = (key, index) => {
 export const getUsers = async (key) => {
   return [];
   // const users = localStorage.getItem(key);
-  //   await fetch("http://localhost:5000/auth/", {
+  //   await fetch("https://glamorous-calf-jumper.cyclic.app/auth/", {
   //     method: "get",
   //     headers: { "Content-type": "application/json", Authorization: "Bearer " + localStorage.getItem("jwt") },
   //   })

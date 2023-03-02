@@ -77,7 +77,7 @@ const AddReminder = () => {
       sms: remindersms,
       occur: reminderoccur,
     };
-    fetch("http://localhost:5000/remainder/create", {
+    fetch("https://glamorous-calf-jumper.cyclic.app/remainder/create", {
       method: "post",
       headers: { "Content-type": "application/json", Authorization: "Bearer " + localStorage.getItem("jwt") },
       body: JSON.stringify(reminder),

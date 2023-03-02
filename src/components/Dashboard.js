@@ -14,7 +14,7 @@ const Dashboard = () => {
   const users = store.getState().userReducer;
   const loggedIndex = useSelector((state) => state.indexReducer[0]);
   //   useEffect(() => {
-  //     fetch("http://localhost:5000/auth/", {
+  //     fetch("https://glamorous-calf-jumper.cyclic.app/auth/", {
   //       method: "get",
   //       headers: { "Content-type": "application/json", Authorization: "Bearer " + localStorage.getItem("jwt") },
   //     })

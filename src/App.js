@@ -7,7 +7,7 @@ import { addUser } from "./store/userReducer";
 import { changeLoggedIndex } from "./store/indexReducer";
 
 const App = () => {
-  fetch("http://localhost:5000/auth/", {
+  fetch("https://glamorous-calf-jumper.cyclic.app/auth/", {
     method: "get",
     headers: { "Content-type": "application/json", Authorization: "Bearer " + localStorage.getItem("jwt") },
   })

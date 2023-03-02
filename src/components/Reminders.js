@@ -13,7 +13,7 @@ const Reminders = () => {
   const users = store.getState().userReducer;
 
   const handleDelete = (reminder, id) => {
-    fetch(`http://localhost:5000/remainder/remainder/${id}`, {
+    fetch(`https://glamorous-calf-jumper.cyclic.app/remainder/remainder/${id}`, {
       method: "delete",
       headers: { "Content-type": "application/json", Authorization: "Bearer " + localStorage.getItem("jwt") },
     })
@@ -35,7 +35,7 @@ const Reminders = () => {
       });
   };
   useEffect(() => {
-    fetch("http://localhost:5000/remainder/", {
+    fetch("https://glamorous-calf-jumper.cyclic.app/remainder/", {
       method: "get",
       headers: { "Content-type": "application/json", Authorization: "Bearer " + localStorage.getItem("jwt") },
     })
