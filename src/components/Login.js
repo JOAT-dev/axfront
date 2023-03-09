@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 import "../styles/Auth.css";
 import { store } from "../store/store";
 import { useHistory } from "react-router";
-import { changeLoggedIndex } from "../store/indexReducer";
 import { Alert, Snackbar } from "@mui/material";
-import { addUser } from "../store/userReducer";
+import { loggedIn } from "../store/userReducer";
 
 const Login = () => {
   const history = useHistory();
@@ -30,7 +29,7 @@ const Login = () => {
   };
 
   const handleLogin = () => {
-    fetch("https://glamorous-calf-jumper.cyclic.app/auth/signin", {
+    fetch("http://localhost:5000/auth/signin", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({
@@ -46,8 +45,7 @@ const Login = () => {
           return;
         }
         localStorage.setItem("jwt", result.token);
-        store.dispatch(addUser(result.user));
-        store.dispatch(changeLoggedIndex(0));
+        store.dispatch(loggedIn(result.user.username));
         setUsername("");
         setPassword("");
       })
